@@ -29,4 +29,16 @@
         compatible = "zmk,mock-led";
         chain-length = <40>;
     };
+
+    left_encoder: encoder_left {
+        compatible = "zmk,mock-encoder";
+        steps = <20>;
+        status = "disabled";
+    };
+
+    right_encoder: encoder_right {
+        compatible = "zmk,mock-encoder";
+        steps = <20>;
+        status = "disabled";
+    };
 };
