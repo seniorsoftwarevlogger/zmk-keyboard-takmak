@@ -3,9 +3,6 @@ if SHIELD_TAKMAK_LEFT
 config ZMK_KEYBOARD_NAME
 	default "Takmak 3.0 L"
 
-config ZMK_SPLIT_ROLE_CENTRAL
-	default y
-
 endif # end SHIELD_TAKMAK_LEFT
 
 
