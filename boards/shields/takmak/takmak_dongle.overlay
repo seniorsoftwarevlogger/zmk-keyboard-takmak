@@ -9,6 +9,7 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
+        zmk,underglow = &led_strip;
         wakeup-source;
     };
 
@@ -17,5 +18,15 @@
         columns = <0>;
         rows = <0>;
         events = <0>;
+    };
+
+    mock_led: ws2812@0 {
+        compatible = "zmk,mock-led";
+        chain-length = <40>;
+    };
+
+    led_strip: led_strip {
+        compatible = "zmk,mock-led";
+        chain-length = <40>;
     };
 };
