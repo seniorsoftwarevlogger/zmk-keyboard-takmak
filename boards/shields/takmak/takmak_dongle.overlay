@@ -32,6 +32,14 @@
 
 };
 
+&kscan0 {
+    compatible = "zmk,kscan-mock";
+    columns = <0>;
+    rows = <0>;
+    events = <0>;
+    /delete-property/ diode-direction;
+};
+
 &left_encoder {
     compatible = "zmk,mock-encoder";
     /delete-property/ a-gpios;
