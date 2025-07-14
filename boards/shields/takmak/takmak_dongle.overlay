@@ -37,6 +37,7 @@
     rows = <0>;
     events = <0>;
     /delete-property/ diode-direction;
+    /delete-property/ wakeup-source;
 };
 
 &left_encoder {
