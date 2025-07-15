@@ -52,10 +52,6 @@
 #define ZOOMV LC(LA(LS(LG(V))))
 #define COMBO LA(LS(LGUI))
 
-&led_strip {
-    chain-length = <40>;
-};
-
 / {
     behaviors {
         rgb_encoder: left_encoder {
