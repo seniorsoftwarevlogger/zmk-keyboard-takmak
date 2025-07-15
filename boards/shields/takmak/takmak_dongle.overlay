@@ -19,7 +19,7 @@
     zmk,physical-layout = &physical_layout0;
 	};
 
-  mock_kscan: kscan_0 {
+  mock_kscan: kscan0 {
       compatible = "zmk,kscan-mock";
       // wakeup-source;
       columns = <0>;
