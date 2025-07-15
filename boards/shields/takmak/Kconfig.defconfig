@@ -1,10 +1,16 @@
-if SHIELD_TAKMAK_LEFT
+if SHIELD_TAKMAK_DONGLE
 
 config ZMK_KEYBOARD_NAME
 	default "Takmak 3.0"
 
 endif
 
+if SHIELD_TAKMAK_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "Takmak 3.0 R"
+
+endif # end SHIELD_TAKMAK_RIGHT
 
 if SHIELD_TAKMAK_LEFT
 
@@ -12,6 +18,8 @@ config ZMK_KEYBOARD_NAME
 	default "Takmak 3.0 L"
 
 endif # end SHIELD_TAKMAK_LEFT
+
+
 
 if ZMK_DISPLAY
 
@@ -21,13 +29,13 @@ config I2C
 config SSD1306
     default y
 
-if SHIELD_TAKMAK_DONGLE
+# if SHIELD_TAKMAK_DONGLE
 
-choice ZMK_DISPLAY_WORK_QUEUE
-    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
-endchoice
+# choice ZMK_DISPLAY_WORK_QUEUE
+#     default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+# endchoice
 
-endif
+# endif
 
 endif # ZMK_DISPLAY
 
@@ -47,15 +55,6 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # LVGL
-
-
-if SHIELD_TAKMAK_RIGHT
-
-config ZMK_KEYBOARD_NAME
-	default "Takmak 3.0 R"
-
-endif # end SHIELD_TAKMAK_RIGHT
-
 
 
 if SHIELD_TAKMAK_LEFT || SHIELD_TAKMAK_RIGHT || SHIELD_TAKMAK_DONGLE
