@@ -41,18 +41,15 @@
 // };
 
 / {
-      // Mock LED strip - no actual hardware interface
-    led_strip: mock_ws2812 {
-        compatible = "worldsemi,ws2812-spi";  // Keep compatible for ZMK
-        status = "disabled";                  // Disable the actual driver
+    // Create a dummy device that satisfies ZMK expectations
+    led_strip: dummy_underglow {
+        compatible = "zmk,behavior-none";  // ZMK's null behavior
+        status = "okay";
+        label = "DUMMY_UNDERGLOW";
         
-        // Fake properties to satisfy device tree
-        reg = <0>;
-        spi-max-frequency = <4000000>;
-        chain-length = <1>;                   // Minimal chain
-        spi-one-frame = <0x70>;
-        spi-zero-frame = <0x40>;
-        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+        // Add properties ZMK underglow system expects
+        #led-cells = <3>;
+        chain-length = <40>;
     };
 
     chosen {
