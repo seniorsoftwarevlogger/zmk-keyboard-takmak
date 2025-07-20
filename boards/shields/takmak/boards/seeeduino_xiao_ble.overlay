@@ -50,7 +50,8 @@
         // Add properties ZMK underglow system expects
         #led-cells = <3>;
         #binding-cells = <0>;
-        #chain-length = <40>; // Length of the LED strip
+        
+        chain-length = <40>; // Length of the LED strip
     };
 
     chosen {
