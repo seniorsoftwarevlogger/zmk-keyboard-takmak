@@ -1,9 +1,25 @@
-/*
-ref: For future reference, this pinout shows both pin numberings https://files.seeedstudio.com/wiki/XIAO-BLE/pinout2.png
-The &gpioX Y  and NRF_PSEL(..., X, Y) uses the PX.Y notation (underlying nRF pin numbers), &xiao_d x uses the unified pinout Dx
-*/
 #include <dt-bindings/led/led.h>
 
+/*
+refeference, this pinout shows both pin numberings https://files.seeedstudio.com/wiki/XIAO-BLE/pinout2.png
+The &gpioX Y  and NRF_PSEL(..., X, Y) uses the PX.Y notation (underlying nRF pin numbers), &xiao_d x uses the unified pinout Dx
+*/
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 2)>;
+        };
+    };
+
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 2)>;
+            low-power-enable;
+        };
+    };
+};
+
+/*
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
@@ -18,6 +34,7 @@ The &gpioX Y  and NRF_PSEL(..., X, Y) uses the PX.Y notation (underlying nRF pin
         };
     };
 };
+*/
 
 &spi3 {
     compatible = "nordic,nrf-spim";
@@ -49,4 +66,3 @@ The &gpioX Y  and NRF_PSEL(..., X, Y) uses the PX.Y notation (underlying nRF pin
         zmk,underglow = &led_strip;
     };
 };
-// vim: filetype=dts fdm=marker:
