@@ -1,4 +1,4 @@
-// #include <dt-bindings/led/led.h>
+#include <dt-bindings/led/led.h>
 
 // &pinctrl {
 //     spi2_default: spi2_default {
@@ -41,12 +41,18 @@
 // };
 
 / {
-    led_strip: ws2812 {
-        compatible = "worldsemi,ws2812-gpio";
-        chain-length = <40>;
+      // Mock LED strip - no actual hardware interface
+    led_strip: mock_ws2812 {
+        compatible = "worldsemi,ws2812-spi";  // Keep compatible for ZMK
+        status = "disabled";                  // Disable the actual driver
+        
+        // Fake properties to satisfy device tree
+        reg = <0>;
+        spi-max-frequency = <4000000>;
+        chain-length = <1>;                   // Minimal chain
+        spi-one-frame = <0x70>;
+        spi-zero-frame = <0x40>;
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-        in-gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;  // Direct GPIO control
-        reset-delay = <280>;
     };
 
     chosen {
