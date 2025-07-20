@@ -41,16 +41,16 @@
 // };
 
 / {
-    // Create a dummy device that satisfies ZMK expectations
-    led_strip: dummy_led_strip {
-        compatible = "dummy,led-strip";
-        status = "okay";
-        
-        chain-length = <40>;
+    led_strip: ws2812 {
+        compatible = "worldsemi,ws2812-gpio";
+        chain-length = <38>; // Keep low for testing
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-        #led-cells = <3>;
-        #binding-cells = <0>;
+        
+        // Use bit-banging on Nice Nano
+        in-gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+        reset-delay = <280>;
     };
+
 
     chosen {
         zmk,underglow = &led_strip;
