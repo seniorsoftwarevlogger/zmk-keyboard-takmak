@@ -42,12 +42,12 @@
 
 / {
     // Create a dummy device that satisfies ZMK expectations
-    led_strip: dummy_underglow {
-        compatible = "zmk,behavior-none";  // ZMK's null behavior
+    led_strip: dummy_led_strip {
+        compatible = "dummy,led-strip";
         status = "okay";
-        label = "DUMMY_UNDERGLOW";
         
-        // Add properties ZMK underglow system expects
+        chain-length = <40>;
+        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
         #led-cells = <3>;
         #binding-cells = <0>;
     };
