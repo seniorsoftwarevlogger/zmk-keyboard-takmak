@@ -26,4 +26,3 @@ include:
   - board: seeeduino_xiao_ble
     shield: settings_reset
     artifact-name: takmak_dongle_settings_reset
-9
