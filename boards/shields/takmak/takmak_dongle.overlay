@@ -15,9 +15,8 @@
 / {  
   chosen {
       zmk,kscan = &mock_kscan;
-      zephyr,display = &oled;
       zmk,physical-layout = &physical_layout0;
-      zmk,underglow = &led_strip;
+      zmk,underglow = &mock_led_strip;
   };
 
   mock_kscan: kscan0 {
@@ -32,6 +31,11 @@
       label = "EXT_POWER";
       control-gpios = <&xiao_d 0 GPIO_ACTIVE_HIGH>;
       init-delay-ms = <10>;
+  };
+
+  mock_led_strip: led_strip {
+      compatible = "zmk,mock-led";
+      chain-length = <70>;
   };
 
   left_encoder: encoder_left {
@@ -68,23 +72,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6)  RC(3,7) RC(3,8) RC(3,9)
 RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4)         RC(4,6)  RC(4,7)         RC(4,9) RC(4,10) RC(4,11) RC(4,12) RC(4,13) RC(4,14)
     >;
   };
-};
-
-&xiao_i2c {
-    status = "okay";
-
-    oled: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
-        width = <128>;
-        height = <32>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        display-offset = <0>;
-        multiplex-ratio = <31>;
-        com-sequential;
-        prechargep = <0x22>;
-    };
 };
 
 &xiao_i2c {
