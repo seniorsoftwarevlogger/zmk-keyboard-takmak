@@ -5,7 +5,6 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <dt-bindings/led/led.h>
 #include "takmak-layouts.dtsi"
 
 &physical_layout0 {
@@ -17,7 +16,6 @@
       zmk,kscan = &mock_kscan;
       zephyr,display = &oled;
       zmk,physical-layout = &physical_layout0;
-      zmk,underglow = &led_strip;
   };
 
   mock_kscan: kscan0 {
