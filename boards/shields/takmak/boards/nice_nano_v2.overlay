@@ -1,4 +1,4 @@
-// #include <dt-bindings/led/led.h>
+#include <dt-bindings/led/led.h>
 
 // &pinctrl {
 //     spi3_default: spi3_default {
@@ -44,7 +44,7 @@
         compatible = "worldsemi,ws2812-gpio";
         chain-length = <40>;
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-        in-gpios = <&gpio0 6>;
+        in-gpios = <&gpio0 6 0>;
         reset-delay = <280>;
     };
 
