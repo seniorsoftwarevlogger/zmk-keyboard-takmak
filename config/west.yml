@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: carrefinho # Prospector
-      url-base: https://github.com/carrefinho
+      url-base: https://github.com/seniorsoftwarevlogger
   projects:
     - name: zmk
       remote: zmkfirmware
