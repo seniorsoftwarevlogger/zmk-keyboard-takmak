@@ -1,5 +1,6 @@
 #include <dt-bindings/led/led.h>
 
+// Spi 2 is not used by the Seeeduino XIAO BLE, only Plus models have it. So we could remap led_strip to it.
 &pinctrl {
     spi2_default: spi2_default {
         group1 {
@@ -25,7 +26,6 @@
 
     led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";
-        // label = "WS2812";
 
         /* SPI */
         reg = <0>; /* ignored, but necessary for SPI bindings */
