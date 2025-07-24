@@ -1,4 +1,23 @@
+if SHIELD_TAKMAK_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "Takmak 3.0"
+
+endif # SHIELD_TAKMAK_DONGLE
+
+
+if SHIELD_TAKMAK_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Takmak 3.0 R"
+
+endif # end SHIELD_TAKMAK_RIGHT
+
+
 if SHIELD_TAKMAK_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Takmak 3.0 L"
 
 if LVGL
 
