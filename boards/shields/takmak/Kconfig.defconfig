@@ -1,25 +1,23 @@
 if SHIELD_TAKMAK_DONGLE
 
 config ZMK_KEYBOARD_NAME
-	default "Takmak 3.0"
+    default "Takmak 3.0"
 
-# choice ZMK_DISPLAY_WORK_QUEUE
-#     default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
-# endchoice
+endif # SHIELD_TAKMAK_DONGLE
 
-endif
 
 if SHIELD_TAKMAK_RIGHT
 
 config ZMK_KEYBOARD_NAME
-	default "Takmak 3.0 R"
+    default "Takmak 3.0 R"
 
 endif # end SHIELD_TAKMAK_RIGHT
+
 
 if SHIELD_TAKMAK_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Takmak 3.0 L"
+    default "Takmak 3.0 L"
 
 if LVGL
 
@@ -54,7 +52,7 @@ endif # end SHIELD_TAKMAK_LEFT
 if SHIELD_TAKMAK_LEFT || SHIELD_TAKMAK_RIGHT || SHIELD_TAKMAK_DONGLE
 
 config ZMK_SPLIT
-	default y
+    default y
 
 endif # end both
 
