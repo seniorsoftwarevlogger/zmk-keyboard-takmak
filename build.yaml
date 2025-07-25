@@ -9,29 +9,29 @@ include:
   - board: nice_nano_v2
     shield: takmak_left
     snippet: studio-rpc-usb-uart
-    cmake-args: "-DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_KEYBOARD_NAME='\"Takmak 3.1 Left\"'"
+    cmake-args: "-DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_KEYBOARD_NAME='\"Takmak 3.1 L\"'"
     artifact-name: left
   - board: nice_nano_v2
     shield: takmak_right
     snippet: studio-rpc-usb-uart
-    cmake-args: '-DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_KEYBOARD_NAME="\x22Takmak 3.1 Right\x22"'
+    cmake-args: "-DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_KEYBOARD_NAME='\"Takmak 3.1 R\"'"
     artifact-name: right
 
   - board: nice_nano_v2
     shield: takmak_left
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_KEYBOARD_NAME=3
+    cmake-args: "-DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_KEYBOARD_NAME='\"Takmak 3.1\"'"
     artifact-name: left_central
 
   - board: nice_nano_v2
     shield: takmak_left
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_KEYBOARD_NAME=4
+    cmake-args: "-DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_KEYBOARD_NAME='\"Takmak 3.1 L2 \"'"
     artifact-name: left_alt
   - board: nice_nano_v2
     shield: takmak_right
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_KEYBOARD_NAME=5
+    cmake-args: "-DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_KEYBOARD_NAME='\"Takmak 3.1 R2 \"'"
     artifact-name: right_alt
 
   - board: nice_nano_v2
