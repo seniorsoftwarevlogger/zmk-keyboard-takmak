@@ -11,6 +11,6 @@ manifest:
       import: app/west.yml
     - name: zmk-dongle-screen
       remote: seniorsoftwarevlogger
-      revision: main
+      revision: cea154a53e3f791d769666aebd719cbe4a479391
   self:
     path: config
