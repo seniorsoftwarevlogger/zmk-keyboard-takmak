@@ -2,15 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: carrefinho # Prospector
+    - name: seniorsoftwarevlogger
       url-base: https://github.com/seniorsoftwarevlogger
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: prospector-zmk-module
-      remote: carrefinho
+    - name: zmk-dongle-screen
+      remote: seniorsoftwarevlogger
       revision: main
   self:
     path: config
