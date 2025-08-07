@@ -4,15 +4,13 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: seniorsoftwarevlogger
       url-base: https://github.com/seniorsoftwarevlogger
-    - name: janpfischer
-      url-base: https://github.com/seniorsoftwarevlogger
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: 147c340c6e8d377304acfdd64dc86cf83ebdfef2 # (see important notice in Installation Guide in the dongle-screen readme)
       import: app/west.yml
     - name: zmk-dongle-screen
-      remote: janpfischer
+      remote: seniorsoftwarevlogger
       revision: main
   self:
     path: config
