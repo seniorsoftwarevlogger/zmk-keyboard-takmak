@@ -5,7 +5,7 @@ manifest:
     - name: seniorsoftwarevlogger
       url-base: https://github.com/seniorsoftwarevlogger
     - name: janpfischer
-      url-base: https://github.com/janpfischer
+      url-base: https://github.com/seniorsoftwarevlogger
   projects:
     - name: zmk
       remote: zmkfirmware
