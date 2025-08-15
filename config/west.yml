@@ -7,10 +7,10 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: 147c340c6e8d377304acfdd64dc86cf83ebdfef2 # (see important notice in Installation Guide in the dongle-screen readme)
+      revision: ccf20a1f5c1534a197d32279abbe0eaf651099d8
       import: app/west.yml
     - name: zmk-dongle-screen
       remote: seniorsoftwarevlogger
-      revision: cea154a53e3f791d769666aebd719cbe4a479391
+      revision: 2aecc3291141b85d2256ffb0a14325500a979165
   self:
     path: config
